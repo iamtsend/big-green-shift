@@ -8,8 +8,18 @@ export default function HomePage() {
       {/* Navigation Header */}
       <header>
         <a className="brand" href="#home">
-          BIG GREEN SHIFT
-          <small>TEAM 19 · MINI PROJECT</small>
+          <Image
+            src="/logo.svg"
+            alt="Team 19 Logo"
+            width={38}
+            height={38}
+            className="brand-logo"
+            priority
+          />
+          <div className="brand-text">
+            BIG GREEN SHIFT
+            <small>TEAM 19 · MINI PROJECT</small>
+          </div>
         </a>
         <nav aria-label="Үндсэн цэс">
           <a href="#problem">Асуудал</a>

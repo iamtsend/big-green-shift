@@ -1,18 +1,19 @@
-import './globals.css';
+import "./globals.css";
 
 export const metadata = {
-  title: 'Big Green Shift — Team 19',
-  description: 'Нарийн боовны шаардлагагүй савлагааг багасгах Team 19 төслийн интерактив үзүүлэн.',
+  title: "Big Green Shift — Team 19",
+  description:
+    "Нарийн боовны шаардлагагүй савлагааг багасгах Team 19 төслийн интерактив үзүүлэн.",
   icons: {
-    icon: '/icon.svg',
-    shortcut: '/icon.svg',
-    apple: '/icon.svg',
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
   },
 };
 
 export const viewport = {
-  themeColor: '#173f31',
-  width: 'device-width',
+  themeColor: "#173f31",
+  width: "device-width",
   initialScale: 1,
 };
 
@@ -56,4 +57,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
