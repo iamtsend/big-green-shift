@@ -153,25 +153,44 @@ export default function HomePage() {
               </span>
               <div className="multiplier-list">
                 <div className="multiplier-row">
-                  <span className="multiplier-item">🥐 1 нарийн боов</span>
-                  <span className="multiplier-arrow">→</span>
-                  <span className="multiplier-result">1 жижиг уут</span>
+                  <div className="multiplier-item">
+                    <span className="multiplier-icons">🥐</span>
+                  </div>
+                  <div className="multiplier-arrow">→</div>
+                  <div className="multiplier-result">
+                    <span className="multiplier-breakdown">1 жижиг уут</span>
+                    <span className="multiplier-total-badge">Нийт 1 уут</span>
+                  </div>
                 </div>
+
                 <div className="multiplier-row">
-                  <span className="multiplier-item">🥐🥐🥐 3 нарийн боов</span>
-                  <span className="multiplier-arrow">→</span>
-                  <span className="multiplier-result">
-                    3 жижиг уут + 1 том уут (4 уут)
-                  </span>
+                  <div className="multiplier-item">
+                    <span className="multiplier-icons">🥐🥐🥐</span>
+                  </div>
+                  <div className="multiplier-arrow">→</div>
+                  <div className="multiplier-result">
+                    <span className="multiplier-breakdown">
+                      3 жижиг + 1 том
+                    </span>
+                    <span className="multiplier-total-badge warning">
+                      Нийт 4 уут
+                    </span>
+                  </div>
                 </div>
+
                 <div className="multiplier-row highlight">
-                  <span className="multiplier-item">
-                    🥐🥐🥐🥐🥐 5 нарийн боов
-                  </span>
-                  <span className="multiplier-arrow">→</span>
-                  <span className="multiplier-result">
-                    5 жижиг уут + 1 том уут (6 уут)
-                  </span>
+                  <div className="multiplier-item">
+                    <span className="multiplier-icons">🥐🥐🥐🥐🥐</span>
+                  </div>
+                  <div className="multiplier-arrow">→</div>
+                  <div className="multiplier-result">
+                    <span className="multiplier-breakdown">
+                      5 жижиг + 1 том
+                    </span>
+                    <span className="multiplier-total-badge danger">
+                      Нийт 6 уут
+                    </span>
+                  </div>
                 </div>
               </div>
               <div className="problem-card-footer">
