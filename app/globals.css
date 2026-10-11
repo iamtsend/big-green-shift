@@ -1144,6 +1144,325 @@ p {
 }
 
 /* ==========================================================================
+   Hero Extra Styles
+   ========================================================================== */
+.hero-pill-group {
+  margin-bottom: 8px;
+}
+
+.hero-highlight {
+  color: var(--lime);
+  background: linear-gradient(135deg, #1b4937 0%, #0f2e23 100%);
+  padding: 2px 14px;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 4px 16px rgba(15, 46, 35, 0.2);
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.hero-secondary-link {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--muted);
+  padding: 12px 16px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.hero-secondary-link:hover {
+  color: var(--ink);
+  background: rgba(15, 46, 35, 0.05);
+}
+
+.strip-tag {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #499d63;
+  margin-bottom: 4px;
+}
+
+/* ==========================================================================
+   Problem Visual Multiplier Card
+   ========================================================================== */
+.problem-visual-box {
+  display: flex;
+  justify-content: center;
+}
+
+.problem-card {
+  background: #ffffff;
+  border: 1px solid var(--border-strong);
+  border-radius: 28px;
+  padding: 32px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: var(--shadow-md);
+}
+
+.problem-card-badge {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #ba4a23;
+  background: #fdf0eb;
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.multiplier-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.multiplier-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: var(--paper-subtle);
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  border: 1px solid rgba(15, 46, 35, 0.04);
+  transition: transform 0.2s ease;
+}
+
+.multiplier-row.highlight {
+  background: #fcf4e4;
+  border-color: #f1cf8a;
+  box-shadow: 0 4px 16px rgba(186, 74, 35, 0.08);
+}
+
+.multiplier-item {
+  font-weight: 700;
+}
+
+.multiplier-arrow {
+  color: var(--muted-light);
+  font-size: 16px;
+}
+
+.multiplier-result {
+  font-weight: 750;
+  color: #ba4a23;
+}
+
+.problem-card-footer {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--border-strong);
+}
+
+.problem-card-footer p {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ==========================================================================
+   Dialogue Box Simulation
+   ========================================================================== */
+.dialogue-box {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dialogue-line {
+  padding: 14px 18px;
+  border-radius: 18px;
+  font-size: 14.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dialogue-line.cashier {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.dialogue-line.customer {
+  background: rgba(216, 242, 102, 0.15);
+  border: 1px solid rgba(216, 242, 102, 0.3);
+  color: #f3ffd4;
+}
+
+.dialogue-avatar {
+  font-size: 11px;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--lime);
+}
+
+.dialogue-speech {
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Section Header Centered
+   ========================================================================== */
+.section-header-centered {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 40px;
+}
+
+/* ==========================================================================
+   Standards Section (MNS Standards)
+   ========================================================================== */
+.standards-section {
+  padding: 85px 6%;
+  background: #ffffff;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.standards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin: 40px 0 30px;
+}
+
+.standard-card {
+  padding: 28px 24px;
+  background: var(--paper);
+  border: 1px solid var(--border-strong);
+  border-radius: 22px;
+  transition: all 0.25s ease;
+}
+
+.standard-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(15, 46, 35, 0.25);
+}
+
+.standard-code {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  background: #ffffff;
+  border: 1px solid var(--border-strong);
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.standard-card h3 {
+  font-size: 18px;
+  margin: 6px 0 10px;
+}
+
+.standard-card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.standards-callout {
+  background: #eef2e4;
+  border: 1px solid rgba(15, 46, 35, 0.12);
+  border-radius: 20px;
+  padding: 24px 28px;
+  margin-top: 10px;
+}
+
+.standards-callout p {
+  max-width: 100%;
+  font-size: 15px;
+  color: var(--ink);
+  margin: 0;
+}
+
+/* ==========================================================================
+   City Scale Highlights (Calculator Left)
+   ========================================================================== */
+.city-scale-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.city-scale-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #ffffff;
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  font-size: 13.5px;
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+
+.city-scale-item strong {
+  font-weight: 750;
+}
+
+.city-scale-item span {
+  font-weight: 700;
+  color: #2e6b4f;
+}
+
+/* ==========================================================================
+   Implementation Cards
+   ========================================================================== */
+.implementation-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.impl-card {
+  padding: 24px 26px;
+  background: #ffffff;
+  border: 1px solid var(--border-strong);
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease;
+}
+
+.impl-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.impl-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.impl-card p {
+  margin: 0;
+  font-size: 14.5px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 footer {
@@ -1234,6 +1553,14 @@ input:focus-visible {
   }
   .result-grid {
     grid-template-columns: 1fr;
+  }
+  .standards-grid {
+    grid-template-columns: 1fr;
+  }
+  .city-scale-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
   }
 }
 

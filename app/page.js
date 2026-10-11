@@ -5,6 +5,7 @@ import SavingsCalculator from "../components/SavingsCalculator";
 export default function HomePage() {
   return (
     <>
+      {/* Navigation Header */}
       <header>
         <a className="brand" href="#home">
           BIG GREEN SHIFT
@@ -13,8 +14,10 @@ export default function HomePage() {
         <nav aria-label="Үндсэн цэс">
           <a href="#problem">Асуудал</a>
           <a href="#solution">Шийдэл</a>
+          <a href="#standards">Стандарт</a>
           <a href="#experiment">Туршилт</a>
           <a href="#impact">Тооцоолуур</a>
+          <a href="#thanks">Талархал</a>
         </nav>
         <button className="full" id="fullscreen">
           ⛶ Бүтэн дэлгэц
@@ -25,34 +28,47 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="hero" id="home">
           <div>
-            <span className="pill">
-              <span className="dot" /> Жижиг үйлдлээс эхлэх өөрчлөлт
-            </span>
+            <div className="hero-pill-group">
+              <span className="pill">
+                <span className="dot dot-pulse" /> Улаанбаатарын 270+ бэйкерийн
+                соёлд чиглэсэн төсөл
+              </span>
+            </div>
             <h1>
               Ганц асуулт.
+              <br />
+              <span className="hero-highlight">2 секунд.</span>
               <br />
               Том <span style={{ color: "#658e41" }}>өөрчлөлт.</span>
             </h1>
             <p className="lead">
               Бидэнд нарийн боов хэрэгтэй.
               <br />
-              Харин нэг бүрд нь уут хэрэгтэй юу?
+              Харин нэг бүрд нь тусдаа уут хэрэгтэй юу?
             </p>
             <p>
-              Хамтад нь савлах боломжтой бүтээгдэхүүнд хэрэглэгчийн сонголтыг
-              санал болгож, шаардлагагүй гялгар уутны хэрэглээг багасгах төсөл.
+              Өглөөний цай, өдрийн амттан, найзуудын уулзалт… Бэйкери их хотын
+              амьдралын салшгүй хэсэг болжээ. Харин энэ хэрэглээний цаана бидний
+              тэр бүр анзаардаггүй шаардлагагүй давхар савлагааг ердөө{" "}
+              <strong>2 секундийн ганц асуултаар</strong> багасгах санаачилга.
             </p>
-            <a href="#solution" className="cta">
-              Өөрчлөлтийг туршаад үзье <span>↗</span>
-            </a>
+            <div className="hero-actions">
+              <a href="#solution" className="cta">
+                Өөрчлөлтийг туршаад үзье <span>↗</span>
+              </a>
+              <a href="#problem" className="hero-secondary-link">
+                Асуудлын учир шалтгаан ↓
+              </a>
+            </div>
           </div>
+
           <div
             className="scene"
             aria-label="Таван нарийн боовыг таван тусдаа уутанд савласан жишээ"
           >
             <div
               className="eyebrow"
-              style={{ position: "relative", marginBottom: "25px" }}
+              style={{ position: "relative", marginBottom: "22px" }}
             >
               Ижил бүтээгдэхүүн. Олон савлагаа.
             </div>
@@ -80,23 +96,26 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Strip */}
+        {/* 3-Column City & Intervention Metric Bar */}
         <div className="strip">
           <div>
-            <strong>01 / Хэрэглэгчийн сонголт</strong>
-            Хамт эсвэл тусдаа савлуулах
+            <span className="strip-tag">ИХ ХОТЫН ХЭМЖЭЭ</span>
+            <strong>270+ Бэйкери</strong>
+            Улаанбаатар хотод үйл ажиллагаа явуулж буй бэйкерийн байршил
           </div>
           <div>
-            <strong>02 / Аюулгүй савлагаа</strong>
-            Тохирох бүтээгдэхүүн, тохирох уут
+            <span className="strip-tag">БИДНИЙ ШИЙДЭЛ</span>
+            <strong>2 Секунд</strong>
+            Касс дээр “Хамтад нь савлуулах уу?” гэж асуух хугацаа
           </div>
           <div>
-            <strong>03 / Хэмжих өөрчлөлт</strong>
-            Уутны тоогоор үр дүнг харьцуулах
+            <span className="strip-tag">ХЭМНЭХ БОЛОМЖ</span>
+            <strong>4 Уут / 5-аас</strong>
+            Хамтад нь савласнаар нэг худалдан авалтаас хэмнэх боломжит уут
           </div>
         </div>
 
-        {/* Section 01: Problem */}
+        {/* Section 01: Problem Context & The Multiplier Effect */}
         <section className="split" id="problem">
           <div>
             <div className="eyebrow">01 — Бид юу олж харсан бэ?</div>
@@ -105,15 +124,20 @@ export default function HomePage() {
               <br />
               Савлагаа нь давхар.
             </h2>
-          </div>
-          <div>
             <p className="lead">
-              Ижил төрлийн хэд хэдэн нарийн боов авахад бүтээгдэхүүн бүрийг
-              жижиг уутанд, дараа нь том уутанд давхар савлах тохиолдол бий.
+              “Бид нарийн боов худалдаж авсан уу? Эсвэл түүнтэй хамт хэрэггүй
+              олон уут авчихсан уу?”
             </p>
             <p>
-              Савлагаа бүтээгдэхүүнийг хамгаалдаг. Бидний асуулт бол
-              хамгаалалтыг хадгалж, уутны тоог багасгаж болох эсэх юм.
+              Монголд бэйкерийн соёл 2010 оноос эрчимтэй хөгжиж, их хотын завгүй
+              амьдралын хэмнэлд өдөр тутам дайрч өнгөрөх газар болжээ.
+              Бүтээгдэхүүнийг шилэн хоргонд байрлуулж, үйлчлүүлэгч сонголтоо
+              хийдэг.
+            </p>
+            <p>
+              Гэвч авч явах үед ижил төрлийн хэд хэдэн нарийн боов авахад
+              бүтээгдэхүүн бүрийг жижиг уутанд, дараа нь том уутанд давхар
+              савлах тохиолдол түгээмэл байна.
             </p>
             <p className="note">
               *5-аас 1 уут болгох нь тайлбарлах жишээ. Бодит хэрэгжилт нь
@@ -121,38 +145,153 @@ export default function HomePage() {
               хамаарна.
             </p>
           </div>
+
+          <div className="problem-visual-box">
+            <div className="problem-card">
+              <span className="problem-card-badge">
+                ӨДӨР ТУТМЫН САВЛАГААНЫ ҮРЖВЭР
+              </span>
+              <div className="multiplier-list">
+                <div className="multiplier-row">
+                  <span className="multiplier-item">🥐 1 нарийн боов</span>
+                  <span className="multiplier-arrow">→</span>
+                  <span className="multiplier-result">1 жижиг уут</span>
+                </div>
+                <div className="multiplier-row">
+                  <span className="multiplier-item">🥐🥐🥐 3 нарийн боов</span>
+                  <span className="multiplier-arrow">→</span>
+                  <span className="multiplier-result">
+                    3 жижиг уут + 1 том уут (4 уут)
+                  </span>
+                </div>
+                <div className="multiplier-row highlight">
+                  <span className="multiplier-item">
+                    🥐🥐🥐🥐🥐 5 нарийн боов
+                  </span>
+                  <span className="multiplier-arrow">→</span>
+                  <span className="multiplier-result">
+                    5 жижиг уут + 1 том уут (6 уут)
+                  </span>
+                </div>
+              </div>
+              <div className="problem-card-footer">
+                <p>
+                  <strong>Бидэнд бүтээгдэхүүн хэрэгтэй байсан.</strong> Харин
+                  энэ бүх давхар савлагаа үнэхээр хэрэгтэй байсан уу?
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
-        {/* Quote section */}
+        {/* Narrative Break: The 2-Second Question */}
         <section className="dark split">
           <div>
-            <div className="eyebrow">Өөрчилсөн зүйл — ганц өгүүлбэр</div>
+            <div className="eyebrow">
+              Өөрчилсөн зүйл — ганц өгүүлбэр, 2 секунд
+            </div>
             <div className="quote">
               “Ижил төрлийн нарийн боовнуудаа{" "}
               <span className="lime">хамтад нь савлуулах уу?</span>”
             </div>
+            <div className="dialogue-box">
+              <div className="dialogue-line cashier">
+                <span className="dialogue-avatar">👩‍💼 Худалдагч:</span>
+                <span className="dialogue-speech">
+                  “Ижил төрлийн нарийн боовнуудаа хамтад нь савлуулах уу?”
+                </span>
+              </div>
+              <div className="dialogue-line customer">
+                <span className="dialogue-avatar">🙋 Үйлчлүүлэгч:</span>
+                <span className="dialogue-speech">
+                  “Тэгье ээ, болно!” (1 тохиромжтой уут)
+                </span>
+              </div>
+            </div>
           </div>
           <div>
             <p className="lead">
-              Шинэ төхөөрөмжөөс өмнө
+              Томоохон хөрөнгө оруулалт, шинэ төхөөрөмжөөс өмнө
               <br />
               шинэ асуулт.
             </p>
             <p>
-              Хэрэглэгч зөвшөөрч, хамт савлах нь хүнсний аюулгүй байдлын
-              шаардлагыг хангасан үед нэг тохиромжтой савлагаа ашиглана.
+              Бид гялгар уутан савлагааг бүрэн халахыг зориогүй, худалдан
+              авагчийн сонголтыг ч хязгаарлаагүй. Зөвхөн нэг зүйлийг шалгахыг
+              хүссэн:
             </p>
-            <p>Тусдаа савлуулах сонголт мөн нээлттэй.</p>
+            <p>
+              Хэрэв худалдагч энэ асуултыг тавьдаг болбол хэрэглэгчийн сонголт
+              өөрчлөгдөх үү? Тэгээд нэг худалдан авалтад ашиглагдах уутны тоо
+              бодитоор буурах уу?
+            </p>
+            <p className="note" style={{ color: "#cad8cf" }}>
+              *Хэрэглэгч тусад нь савлуулахыг хүсвэл тэр сонголт нь 100%
+              нээлттэй хэвээр үлдэнэ.
+            </p>
           </div>
         </section>
 
-        {/* Section 02: Solution (Interactive Client Component) */}
+        {/* Section 02: Interactive Solution Visualizer */}
         <section id="solution">
-          <div className="eyebrow">02 — Дэлгэц дээр туршаад үз</div>
+          <div className="section-header-centered">
+            <div className="eyebrow">02 — Дэлгэц дээр туршаад үз</div>
+            <h2>Сонголтоос өөрчлөлт эхэлнэ</h2>
+            <p className="lead" style={{ margin: "auto" }}>
+              Таван нарийн боов авах үед савлагааны хоёр сонголтын ялгааг шууд
+              харьцуулж хараарай.
+            </p>
+          </div>
           <PackagingComparison />
         </section>
 
-        {/* Section 03: Experiment */}
+        {/* Section: Standards & Hygiene (MNS Standards from video) */}
+        <section className="standards-section" id="standards">
+          <div className="eyebrow">Эрүүл ахуй · Стандарт · Хамгаалалт</div>
+          <h2>Бид стандартыг үгүйсгэхгүй.</h2>
+          <p className="lead">
+            Гялгар уут нь огт хэрэггүй зүйл биш. Бүтээгдэхүүнийг хамгаалах,
+            эрүүл ахуйг сахих нь нэн тэргүүний шаардлага.
+          </p>
+
+          <div className="standards-grid">
+            <div className="standard-card">
+              <span className="standard-code">MNS 5547:2005</span>
+              <h3>Нийлэг сав баглаа боодол</h3>
+              <p>
+                Хүнсний бүтээгдэхүүний нийлэг сав баглаа боодлын техникийн
+                шаардлага, чанарын үзүүлэлтийг тодорхойлдог.
+              </p>
+            </div>
+            <div className="standard-card">
+              <span className="standard-code">MNS 5684:2006</span>
+              <h3>Хүнсний зориулалттай хальс</h3>
+              <p>
+                Хүнсний зориулалтаар ашиглагдах нийлэг хальсан савлагааны
+                ангилал, шаардлагыг заана.
+              </p>
+            </div>
+            <div className="standard-card">
+              <span className="standard-code">MNS 6648:2016</span>
+              <h3>Химийн бодисын аюулгүй байдал</h3>
+              <p>
+                Савлагааны материалаас хүнсэнд шилжиж болзошгүй химийн бодисын
+                зөвшөөрөгдөх дээд хэмжээг баталгаажуулдаг.
+              </p>
+            </div>
+          </div>
+
+          <div className="standards-callout">
+            <p>
+              <strong>Бидний зарчим:</strong> Бүтээгдэхүүнийг стандартын дагуу
+              хамгаалах ёстой. Харин стандарт зөрчихгүйгээр, хамтад нь
+              хадгалагддаг ижил төрлийн нарийн боовны шаардлагагүй давхар
+              савлагааг цөөлөх нь бидний зорилго юм.
+            </p>
+          </div>
+        </section>
+
+        {/* Section 03: The Experiment (Tous Les Jours Sümber Ord) */}
         <section id="experiment">
           <div className="eyebrow">03 — Бодит орчин дахь туршилт</div>
           <h2>
@@ -161,21 +300,24 @@ export default function HomePage() {
             Нэг өөрчлөлт.
           </h2>
           <p className="lead">
-            Туршилтын байршил: Tous Les Jours-ийн Сүмбэр Орд салбар.
-            <br />1 өдөр суурь ажиглалт + 2 өдөр сонголт санал болгох.
+            Туршилтын байршил:{" "}
+            <strong>Tous Les Jours-ийн Сүмбэр Орд салбар</strong>.<br />1 өдөр
+            суурь ажиглалт + 2 өдөр сонголт санал болгох.
           </p>
+
           <div className="steps">
             <div className="step">
               <span className="num">ӨДӨР 01 / ӨМНӨ</span>
-              <h3>Ажиглаж бүртгэнэ</h3>
+              <h3>Ажиглаж бүртгэв</h3>
               <p>
-                Худалдан авалт, бүтээгдэхүүний тоо, жижиг болон гадна уутны тоог
-                тус тусад нь тэмдэглэв.
+                Худалдан авалт, бүтээгдэхүүний тоо, жижиг болон гадна уутны
+                хэрэглээг кассын хэсэгт тус тусад нь ажиглалтын хуудсаар
+                бүртгэв.
               </p>
             </div>
             <div className="step">
               <span className="num">ӨДӨР 02–03 / ҮЙЛДЭЛ</span>
-              <h3>Сонголт санал болгоно</h3>
+              <h3>Сонголт санал болгов</h3>
               <p>
                 Хамт савлах боломжтой үед асуултаа тавьж, зөвшөөрсөн болон
                 тусдаа савлуулсан тохиолдлыг бүртгэв.
@@ -183,15 +325,16 @@ export default function HomePage() {
             </div>
             <div className="step">
               <span className="num">ХАРЬЦУУЛАЛТ / ДАРАА</span>
-              <h3>Үр дүн</h3>
+              <h3>Үр дүнг хэмжив</h3>
               <p>
                 Харьцуулах боломжтой худалдан авалт тутмын уутны хэрэглээ,
                 зөвшөөрсөн хувь, хэмнэсэн уутны тоог гаргав.
               </p>
             </div>
           </div>
+
           <div className="results">
-            <span className="pill">Бодит хэмжилтийн дүн</span>
+            <span className="pill">Бодит хэмжилтийн дүн хүлээгдэж байна</span>
             <h3>Бидний шалгах гурван үзүүлэлт</h3>
             <div className="result-grid">
               <div>
@@ -205,13 +348,14 @@ export default function HomePage() {
               </div>
             </div>
             <p className="note">
-              {/* Энэ хэсэгт туршилтын бүртгэлээр баталгаажсан дүнг байршуулна.
-              Доорх тооцоолуурын тоонууд нь бодит туршилтын үр дүн биш. */}
+              Энэ хэсэгт туршилтын бүртгэлээр баталгаажсан дүнг байршуулна.
+              Доорх тооцоолуурын тоонууд нь бодит туршилтын үр дүн биш
+              тооцоолсон таамаг юм.
             </p>
           </div>
         </section>
 
-        {/* Section 04: Impact (Interactive Calculator Client Component) */}
+        {/* Section 04: Scalability & Calculator */}
         <section className="split" id="impact">
           <div>
             <div className="eyebrow">04 — Цааш өргөжүүлбэл?</div>
@@ -222,10 +366,24 @@ export default function HomePage() {
             </h2>
             <p className="lead">Өөрийн нөхцөлөөр тооцоод үзээрэй.</p>
             <p>
-              Өдөрт хамт савлуулсан худалдан авалт, нэг удаад хэмнэсэн уут,
-              салбарын тоог өөрчлөхөд боломжит хэмнэлт шинэчлэгдэнэ.
+              Энэ асуулт ганц салбарт, хоёр өдөр биш… Улаанбаатарын олон салбарт
+              өдөр бүр тавигддаг бол ямар хэмнэлт гарах вэ?
             </p>
-            <p className="note">
+            <div className="city-scale-highlights">
+              <div className="city-scale-item">
+                <strong>1 салбарт (өдөрт 20 захиалга)</strong>
+                <span>→ Жилд ~29,200 уут хэмнэнэ</span>
+              </div>
+              <div className="city-scale-item">
+                <strong>10 салбарт өргөжүүлбэл</strong>
+                <span>→ Жилд ~292,000 уут хэмнэнэ</span>
+              </div>
+              <div className="city-scale-item">
+                <strong>100 салбарт хэрэгжвэл</strong>
+                <span>→ Жилд ~2.9 сая уутны хэрэглээ буурна</span>
+              </div>
+            </div>
+            <p className="note" style={{ marginTop: "16px" }}>
               Таамаг тооцоо: бүх сонгосон салбарт өдөр бүр ижил үр дүн гарна гэж
               үзнэ. Бодит үр дүн нь хэрэглэгчийн сонголт, бүтээгдэхүүн, ажлын
               өдөр болон савлагааны шаардлагаас хамаарна.
@@ -234,7 +392,7 @@ export default function HomePage() {
           <SavingsCalculator />
         </section>
 
-        {/* Section 05: Implementation considerations */}
+        {/* Section 05: Practical Implementation & Business Synergy */}
         <section className="split">
           <div>
             <div className="eyebrow">05 — Хэрэгжүүлэхэд анхаарах зүйл</div>
@@ -243,28 +401,38 @@ export default function HomePage() {
               <br />
               Тохиромжтой савлагаа.
             </h2>
+            <p className="lead">
+              Бизнесийн үр ашиг, хэрэглэгчийн сонголт, хүнсний аюулгүй байдлын
+              тэнцвэр.
+            </p>
           </div>
-          <div>
-            <h3>Хүнсний аюулгүй байдал</h3>
-            <p>
-              Ижил хөргөгчинд хадгалагддаг нь хамт савлахад хангалттай үндэслэл
-              биш. Орц, харшил үүсгэгч, бохирдлын эрсдэл, бүтээгдэхүүний бүтэц
-              болон салбарын журмыг харгалзана.
-            </p>
-            <h3>Хэрэглэгчийн зөвшөөрөл</h3>
-            <p>
-              Сонголтыг ойлгомжтой санал болгож, тусдаа савлуулах хүсэлтийг
-              хүндэтгэнэ.
-            </p>
-            <h3>Бизнесийн боломж</h3>
-            <p>
-              Уутны зардал болон савлах хугацааг хэмжвэл уутны тооноос гадна үйл
-              ажиллагааны үр ашгийг үнэлэх боломжтой.
-            </p>
+          <div className="implementation-cards">
+            <div className="impl-card">
+              <h3>🛡️ Хүнсний аюулгүй байдал</h3>
+              <p>
+                Ижил хөргөгчинд хадгалагддаг нь хамт савлахад хангалттай
+                үндэслэл биш. Орц, харшил үүсгэгч, бохирдлын эрсдэл,
+                бүтээгдэхүүний бүтэц болон салбарын журмыг харгалзана.
+              </p>
+            </div>
+            <div className="impl-card">
+              <h3>🤝 Хэрэглэгчийн зөвшөөрөл</h3>
+              <p>
+                Сонголтыг ойлгомжтой, найрсаг санал болгож, тусдаа савлуулах
+                хүсэлтийг ямагт хүндэтгэнэ.
+              </p>
+            </div>
+            <div className="impl-card">
+              <h3>⚡ Бизнесийн давхар үр өгөөж</h3>
+              <p>
+                Гялгар уутны зардал буурахаас гадна касс дээр савлах хугацаа
+                богиносож, үйлчилгээний хурд, үйл ажиллагааны үр ашиг нэмэгдэнэ.
+              </p>
+            </div>
           </div>
         </section>
 
-        {/* End / Call to action */}
+        {/* End / Call to Action */}
         <section className="end">
           <div className="eyebrow">Small question. Big change.</div>
           <h2>
@@ -273,16 +441,23 @@ export default function HomePage() {
             хэрэглэх шаардлагагүй байсан уут.
           </h2>
           <p className="lead">
-            Дараагийн худалдан авалт дээрээ
+            Байгальд ээлтэй өөрчлөлт үргэлж том шийдвэрээс эхэлдэггүй.
             <br />
-            “Хамтад нь савлуулж болох уу?” гэж асуугаарай.
+            Заримдаа бидний өдөр бүр хэлдэг <strong>
+              ганцхан өгүүлбэрээс
+            </strong>{" "}
+            эхэлдэг.
+          </p>
+          <p>
+            Дараагийн худалдан авалт дээрээ “Хамтад нь савлуулж болох уу?” гэж
+            асуугаарай.
           </p>
           <a href="#home" className="cta">
             Эхнээс нь үзэх ↑
           </a>
         </section>
 
-        {/* Acknowledgments */}
+        {/* Acknowledgments & Project Info */}
         <section
           className="acknowledgments"
           id="thanks"
@@ -306,8 +481,8 @@ export default function HomePage() {
               <h3>Tous Les Jours Mongolia</h3>
               <p>
                 Туршилтыг бодит орчинд хэрэгжүүлэх боломж олгож, хамтран
-                ажилласан <strong>Tous Les Jours Mongolia хамт олонд</strong>{" "}
-                чин сэтгэлийн талархал илэрхийлье.
+                ажилласан <strong>Сүмбэр Орд салбарын хамт олонд</strong> чин
+                сэтгэлийн талархал илэрхийлье.
               </p>
               <p>
                 Бидний жижиг санааг бодит үйлдэл болгоход дэмжлэг үзүүлсэнд
@@ -315,13 +490,14 @@ export default function HomePage() {
               </p>
               <a
                 className="partner-link"
-                href="https://www.tlj.mn/"
+                href="https://www.tlj.co.kr/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                tlj.mn <span aria-hidden="true">↗</span>
+                tlj.co.kr <span aria-hidden="true">↗</span>
               </a>
             </article>
+
             <article className="ack-card">
               <div className="partner-logo">
                 <Image
