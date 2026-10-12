@@ -514,11 +514,11 @@ export default function HomePage() {
               </p>
               <a
                 className="partner-link"
-                href="https://www.tlj.co.kr/"
+                href="https://www.tlj.mn/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                tlj.co.kr <span aria-hidden="true">↗</span>
+                tlj.mn <span aria-hidden="true">↗</span>
               </a>
             </article>
 
