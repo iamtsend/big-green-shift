@@ -415,41 +415,62 @@ export default function HomePage() {
 
         {/* Section: Standards & Hygiene (MNS Standards from video) */}
         <section className="standards-section" id="standards">
-          <div className="eyebrow">Эрүүл ахуй · Стандарт · Хамгаалалт</div>
-          <h2>Бид стандартыг үгүйсгэхгүй.</h2>
-          <p className="lead">
-            Гялгар уут нь огт хэрэггүй зүйл биш. Бүтээгдэхүүнийг хамгаалах,
-            эрүүл ахуйг сахих нь нэн тэргүүний шаардлага.
-          </p>
+          <div className="standards-heading">
+            <div>
+              <div className="eyebrow">Эрүүл ахуй · Стандарт · Хамгаалалт</div>
+              <h2>Бид стандартыг үгүйсгэхгүй.</h2>
+              <p className="lead">
+                Гялгар уут нь огт хэрэггүй зүйл биш. Бүтээгдэхүүнийг хамгаалах,
+                эрүүл ахуйг сахих нь нэн тэргүүний шаардлага.
+              </p>
+            </div>
+            <div className="standards-priority">
+              <span aria-hidden="true">🛡️</span>
+              <div>
+                <strong>Аюулгүй байдал</strong>
+                <small>Үргэлж нэн тэргүүнд</small>
+              </div>
+            </div>
+          </div>
 
           <div className="standards-grid">
-            <div className="standard-card">
-              <span className="standard-code">MNS 5547:2005</span>
+            <article className="step standard-card">
+              <div className="standard-card-top">
+                <span className="standard-icon" aria-hidden="true">🛍️</span>
+                <span className="standard-code">MNS 5547:2005</span>
+              </div>
               <h3>Нийлэг сав баглаа боодол</h3>
               <p>
                 Хүнсний бүтээгдэхүүний нийлэг сав баглаа боодлын техникийн
                 шаардлага, чанарын үзүүлэлтийг тодорхойлдог.
               </p>
-            </div>
-            <div className="standard-card">
-              <span className="standard-code">MNS 5684:2006</span>
+            </article>
+            <article className="step standard-card">
+              <div className="standard-card-top">
+                <span className="standard-icon" aria-hidden="true">🥡</span>
+                <span className="standard-code">MNS 5684:2006</span>
+              </div>
               <h3>Хүнсний зориулалттай хальс</h3>
               <p>
                 Хүнсний зориулалтаар ашиглагдах нийлэг хальсан савлагааны
                 ангилал, шаардлагыг заана.
               </p>
-            </div>
-            <div className="standard-card">
-              <span className="standard-code">MNS 6648:2016</span>
+            </article>
+            <article className="step standard-card">
+              <div className="standard-card-top">
+                <span className="standard-icon" aria-hidden="true">🧪</span>
+                <span className="standard-code">MNS 6648:2016</span>
+              </div>
               <h3>Химийн бодисын аюулгүй байдал</h3>
               <p>
                 Савлагааны материалаас хүнсэнд шилжиж болзошгүй химийн бодисын
                 зөвшөөрөгдөх дээд хэмжээг баталгаажуулдаг.
               </p>
-            </div>
+            </article>
           </div>
 
           <div className="standards-callout">
+            <span className="standards-callout-icon" aria-hidden="true">✓</span>
             <p>
               <strong>Бидний зарчим:</strong> Бүтээгдэхүүнийг стандартын дагуу
               хамгаалах ёстой. Харин стандарт зөрчихгүйгээр, хамтад нь
