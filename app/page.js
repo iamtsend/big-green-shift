@@ -449,15 +449,15 @@ export default function HomePage() {
             <div className="city-scale-highlights">
               <div className="city-scale-item">
                 <strong>1 салбарт хэрэгжүүлбэл</strong>
-                <span>→ Жилд ~30,660 уут хэмнэнэ</span>
+                <span>→ Жилд ~30,113 уут хэмнэнэ</span>
               </div>
               <div className="city-scale-item">
                 <strong>10 салбарт өргөжүүлбэл</strong>
-                <span>→ Жилд ~306,600 уут хэмнэнэ</span>
+                <span>→ Жилд ~301,130 уут хэмнэнэ</span>
               </div>
               <div className="city-scale-item">
                 <strong>100 салбарт хэрэгжүүлбэл</strong>
-                <span>→ Жилд ~3.07 сая уут хэмнэнэ</span>
+                <span>→ Жилд ~3.01 сая уут хэмнэнэ</span>
               </div>
             </div>
             <p className="note" style={{ marginTop: "16px" }}>
