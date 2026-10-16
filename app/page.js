@@ -2,6 +2,7 @@ import Image from "next/image";
 import PackagingComparison from "../components/PackagingComparison";
 import ResponsiveNavigation from "../components/ResponsiveNavigation";
 import SavingsCalculator from "../components/SavingsCalculator";
+import VideoModalButton from "../components/VideoModalButton";
 
 const experimentDays = [
   { day: "Өдөр 1", breads: 240, bags: 181, saved: null },
@@ -195,11 +196,9 @@ export default function HomePage() {
               <strong>2 секундийн ганц асуултаар</strong> багасгах санаачилга.
             </p>
             <div className="hero-actions">
-              <a href="#solution" className="cta">
-                Өөрчлөлтийг туршаад үзье <span>↗</span>
-              </a>
-              <a href="#problem" className="hero-secondary-link">
-                Асуудлын учир шалтгаан ↓
+              <VideoModalButton />
+              <a href="#solution" className="hero-secondary-link">
+                Өөрчлөлтийг туршаад үзье ↓
               </a>
             </div>
           </div>
@@ -705,6 +704,18 @@ export default function HomePage() {
       хэрэглээг бууруулах боломжтойг
       энэхүү туршилт харууллаа.
     </p>
+  </div>
+  <div className="results-report">
+    <a
+      href="/reports/one-page.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Нэг хуудасны ногоон туршилтын загварыг PDF-ээр шинэ таб дээр нээх"
+    >
+      <span className="results-report-type" aria-hidden="true">PDF</span>
+      Нэг хуудасны ногоон туршилтын загвар
+      <span aria-hidden="true">↗</span>
+    </a>
   </div>
 </section>
 
