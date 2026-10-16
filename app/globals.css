@@ -1444,12 +1444,36 @@ p {
 }
 
 .results {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   color: #ffffff;
-  background: #0f2e23;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(216, 242, 102, 0.18), transparent 38%),
+    radial-gradient(ellipse at 0% 100%, rgba(73, 157, 99, 0.16), transparent 42%),
+    #0f2e23;
   border: 1px solid rgba(15, 46, 35, 0.16);
   border-radius: 30px;
   padding: 38px;
   box-shadow: var(--shadow-md);
+}
+
+.results .results-leaf {
+  position: absolute;
+  right: -38px;
+  bottom: -92px;
+  z-index: 0;
+  width: clamp(180px, 22vw, 280px);
+  height: auto;
+  color: var(--lime);
+  opacity: 0.16;
+  transform-origin: 40% 95%;
+  pointer-events: none;
+}
+
+.results > * {
+  position: relative;
+  z-index: 1;
 }
 
 .results > .pill {
@@ -1491,6 +1515,13 @@ p {
 
 }
 
+.result-grid .result-featured {
+  background: var(--lime-soft);
+  border-color: rgba(216, 242, 102, 0.7);
+  color: var(--ink);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
 .result-grid div:hover {
 
   transform: translateY(-2px);
@@ -1511,6 +1542,10 @@ p {
 
   margin-bottom: 6px;
 
+}
+
+.result-grid .result-featured b {
+  color: var(--ink-deep);
 }
 
 .results > p {
@@ -3709,7 +3744,9 @@ header .site-nav-toggle {
 
   }
 
-  .end-leaf--right {
+  .end-leaf--right,
+
+  .results .results-leaf {
 
     animation: bgs-leaf-right 10s -2s ease-in-out infinite alternate;
 

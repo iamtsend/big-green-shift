@@ -661,6 +661,7 @@ export default function HomePage() {
   </figure>
 
   <div className="results">
+    <LeafSprig className="results-leaf" />
     <span className="pill">
       <Image src="/illustrations/check-circle.svg" alt="" width={17} height={17} className="result-check-illustration" /> 3 өдрийн туршилтын үр дүн
     </span>
@@ -672,7 +673,7 @@ export default function HomePage() {
     </h3>
 
     <div className="result-grid">
-      <div>
+      <div className="result-featured">
         <b>168</b>
         Хэмнэсэн гялгар уут (ширхэг)
       </div>
