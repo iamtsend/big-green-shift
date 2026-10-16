@@ -1548,6 +1548,10 @@ p {
   color: var(--ink-deep);
 }
 
+.heading-accent {
+  color: #499d63;
+}
+
 .results > p {
   color: #c7d7ce;
 }
@@ -3207,6 +3211,20 @@ p {
   flex-direction: column;
 
   gap: 16px;
+
+}
+
+.implementation-section {
+
+  position: relative;
+
+  isolation: isolate;
+
+}
+
+.implementation-title-accent {
+
+  color: #3d8055;
 
 }
 

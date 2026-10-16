@@ -420,7 +420,10 @@ export default function HomePage() {
         <section id="solution">
           <div className="section-header-centered">
             <div className="eyebrow">02 — Дэлгэц дээр туршаад үз</div>
-            <h2>Сонголтоос өөрчлөлт эхэлнэ</h2>
+            <h2>
+              Сонголтоос <span className="heading-accent">өөрчлөлт</span>{" "}
+              эхэлнэ
+            </h2>
             <p className="lead" style={{ margin: "auto" }}>
               Таван нарийн боов авах үед савлагааны хоёр сонголтын ялгааг шууд
               харьцуулж хараарай.
@@ -748,13 +751,15 @@ export default function HomePage() {
         </section>
 
         {/* Section 05: Practical Implementation & Business Synergy */}
-        <section className="split">
+        <section className="split implementation-section">
           <div>
             <div className="eyebrow">05 — Хэрэгжүүлэхэд анхаарах зүйл</div>
             <h2>
               Зөв сонголт.
               <br />
-              Тохиромжтой савлагаа.
+              <span className="implementation-title-accent">
+                Тохиромжтой савлагаа.
+              </span>
             </h2>
             <p className="lead">
               Бизнесийн үр ашиг, хэрэглэгчийн сонголт, хүнсний аюулгүй байдлын
