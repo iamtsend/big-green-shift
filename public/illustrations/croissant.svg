@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img">
+
+<defs>
+ <linearGradient id="crust" x1="11" y1="14" x2="53" y2="52" gradientUnits="userSpaceOnUse">
+ <stop stop-color="#F9D89A"/><stop offset=".54" stop-color="#EAB164"/><stop offset="1" stop-color="#BF742E"/>
+ </linearGradient>
+ <linearGradient id="fold" x1="28" y1="15" x2="34" y2="51" gradientUnits="userSpaceOnUse"><stop stop-color="#FCE8BC"/><stop offset="1" stop-color="#D99240"/></linearGradient>
+</defs>
+<path d="M6.2 44.2C9.7 38.4 9.6 28.2 16.2 23.8C20.6 20.9 24.1 26.2 29.2 28.5C35.1 31.1 39.7 26 44.2 21.3C49.5 18.2 55.5 30.6 58 40.5C48.6 49 40.1 52 30.6 50.5C21.7 49.1 13.4 50.1 6.2 44.2Z" fill="url(#crust)" stroke="#8C5427" stroke-width="2" stroke-linejoin="round"/>
+<path d="M8.5 42.1C11.3 35.3 10 26.6 16.2 23.8C19 22.5 22.1 24.3 23.7 26.3C21.5 34 21.7 41.6 25.6 48.6C17.5 50.2 12.1 46.7 8.5 42.1Z" fill="#D9954C" stroke="#9D612D" stroke-width="1.5"/>
+<path d="M23.5 26.6C26.5 27.1 28.4 29.6 32.8 29.6C37.3 29.6 40.7 24.5 43.6 22.6C46.2 29.7 47.7 37.7 45.3 46.9C39.8 50.9 34.6 51.2 28.7 49.2C25.9 41.4 23.3 34.4 23.5 26.6Z" fill="url(#fold)" stroke="#AF6B2D" stroke-width="1.7"/>
+<path d="M46 24.5C51.2 24.8 56.2 34.7 58 40.5C54.1 44.4 50.6 46 45.3 46.9C48.1 39.4 48.1 31.6 46 24.5Z" fill="#D69648" stroke="#9D612D" stroke-width="1.7"/>
+<path d="M13.9 38.8C15.4 41.3 18 43.2 20.8 44M28 33.5C30.8 35.7 34.4 35.5 36.8 33.5M30 42.1C33 44.3 36.7 44.4 40.3 42.9M49.8 34.7L53.1 39.1" stroke="#FFF4D8" stroke-width="2.1" stroke-linecap="round" opacity=".9"/>
+<path d="M16.2 30.7C17.9 29.4 19.1 29 20.5 29.5M37.4 47.9C39.1 47.5 40.4 46.9 41.7 46" stroke="#A96429" stroke-width="1.4" stroke-linecap="round" opacity=".65"/>
+
+</svg>

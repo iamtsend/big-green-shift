@@ -222,19 +222,29 @@ export default function HomePage() {
             </div>
             <div className="bagrow">
               <div className="bag">
-                <span className="bread">🥐</span>
+                <span className="bread">
+                  <Image src="/illustrations/bread-roll.svg" alt="" width={50} height={50} className="bread-illustration" />
+                </span>
               </div>
               <div className="bag">
-                <span className="bread">🥐</span>
+                <span className="bread">
+                  <Image src="/illustrations/bread-roll.svg" alt="" width={50} height={50} className="bread-illustration" />
+                </span>
               </div>
               <div className="bag">
-                <span className="bread">🥐</span>
+                <span className="bread">
+                  <Image src="/illustrations/bread-roll.svg" alt="" width={50} height={50} className="bread-illustration" />
+                </span>
               </div>
               <div className="bag">
-                <span className="bread">🥐</span>
+                <span className="bread">
+                  <Image src="/illustrations/bread-roll.svg" alt="" width={50} height={50} className="bread-illustration" />
+                </span>
               </div>
               <div className="bag">
-                <span className="bread">🥐</span>
+                <span className="bread">
+                  <Image src="/illustrations/bread-roll.svg" alt="" width={50} height={50} className="bread-illustration" />
+                </span>
               </div>
             </div>
             <div className="scene-label">5 нарийн боов → 5 жижиг уут</div>
@@ -302,7 +312,11 @@ export default function HomePage() {
               <div className="multiplier-list">
                 <div className="multiplier-row">
                   <div className="multiplier-item">
-                    <span className="multiplier-icons">🥐</span>
+                    <span className="multiplier-icons multiplier-illustrations" aria-hidden="true">
+                    {Array.from({ length: 1 }, (_, i) => (
+                      <Image key={i} src="/illustrations/bread-roll.svg" alt="" width={27} height={27} className="mini-bread-illustration" />
+                    ))}
+                  </span>
                   </div>
                   <div className="multiplier-arrow">→</div>
                   <div className="multiplier-result">
@@ -313,7 +327,11 @@ export default function HomePage() {
 
                 <div className="multiplier-row">
                   <div className="multiplier-item">
-                    <span className="multiplier-icons">🥐🥐🥐</span>
+                    <span className="multiplier-icons multiplier-illustrations" aria-hidden="true">
+                    {Array.from({ length: 3 }, (_, i) => (
+                      <Image key={i} src="/illustrations/bread-roll.svg" alt="" width={27} height={27} className="mini-bread-illustration" />
+                    ))}
+                  </span>
                   </div>
                   <div className="multiplier-arrow">→</div>
                   <div className="multiplier-result">
@@ -328,7 +346,11 @@ export default function HomePage() {
 
                 <div className="multiplier-row highlight">
                   <div className="multiplier-item">
-                    <span className="multiplier-icons">🥐🥐🥐🥐🥐</span>
+                    <span className="multiplier-icons multiplier-illustrations" aria-hidden="true">
+                    {Array.from({ length: 5 }, (_, i) => (
+                      <Image key={i} src="/illustrations/bread-roll.svg" alt="" width={27} height={27} className="mini-bread-illustration" />
+                    ))}
+                  </span>
                   </div>
                   <div className="multiplier-arrow">→</div>
                   <div className="multiplier-result">
@@ -364,13 +386,13 @@ export default function HomePage() {
             </div>
             <div className="dialogue-box">
               <div className="dialogue-line cashier">
-                <span className="dialogue-avatar">👩‍💼 Худалдагч:</span>
+                <span className="dialogue-avatar"><Image src="/illustrations/cashier.svg" alt="" width={30} height={30} className="dialogue-avatar-image" /> Худалдагч:</span>
                 <span className="dialogue-speech">
                   “Ижил төрлийн нарийн боовнуудаа хамтад нь савлуулах уу?”
                 </span>
               </div>
               <div className="dialogue-line customer">
-                <span className="dialogue-avatar">🙋 Үйлчлүүлэгч:</span>
+                <span className="dialogue-avatar"><Image src="/illustrations/customer.svg" alt="" width={30} height={30} className="dialogue-avatar-image" /> Үйлчлүүлэгч:</span>
                 <span className="dialogue-speech">
                   “Тэгье ээ, болно!” (1 тохиромжтой уут)
                 </span>
@@ -425,7 +447,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="standards-priority">
-              <span aria-hidden="true">🛡️</span>
+              <span aria-hidden="true"><Image src="/illustrations/shield-check.svg" alt="" width={34} height={34} className="priority-illustration" /></span>
               <div>
                 <strong>Аюулгүй байдал</strong>
                 <small>Үргэлж нэн тэргүүнд</small>
@@ -436,7 +458,7 @@ export default function HomePage() {
           <div className="standards-grid">
             <article className="step standard-card">
               <div className="standard-card-top">
-                <span className="standard-icon" aria-hidden="true">🛍️</span>
+                <span className="standard-icon" aria-hidden="true"><Image src="/illustrations/packaging.svg" alt="" width={34} height={34} className="standard-illustration" /></span>
                 <span className="standard-code">MNS 5547:2005</span>
               </div>
               <h3>Нийлэг сав баглаа боодол</h3>
@@ -447,7 +469,7 @@ export default function HomePage() {
             </article>
             <article className="step standard-card">
               <div className="standard-card-top">
-                <span className="standard-icon" aria-hidden="true">🥡</span>
+                <span className="standard-icon" aria-hidden="true"><Image src="/illustrations/film.svg" alt="" width={34} height={34} className="standard-illustration" /></span>
                 <span className="standard-code">MNS 5684:2006</span>
               </div>
               <h3>Хүнсний зориулалттай хальс</h3>
@@ -458,7 +480,7 @@ export default function HomePage() {
             </article>
             <article className="step standard-card">
               <div className="standard-card-top">
-                <span className="standard-icon" aria-hidden="true">🧪</span>
+                <span className="standard-icon" aria-hidden="true"><Image src="/illustrations/lab-safe.svg" alt="" width={34} height={34} className="standard-illustration" /></span>
                 <span className="standard-code">MNS 6648:2016</span>
               </div>
               <h3>Химийн бодисын аюулгүй байдал</h3>
@@ -470,7 +492,7 @@ export default function HomePage() {
           </div>
 
           <div className="standards-callout">
-            <span className="standards-callout-icon" aria-hidden="true">✓</span>
+            <span className="standards-callout-icon" aria-hidden="true"><Image src="/illustrations/check-circle.svg" alt="" width={32} height={32} /></span>
             <p>
               <strong>Бидний зарчим:</strong> Бүтээгдэхүүнийг стандартын дагуу
               хамгаалах ёстой. Харин стандарт зөрчихгүйгээр, хамтад нь
@@ -655,7 +677,7 @@ export default function HomePage() {
 
   <div className="results">
     <span className="pill">
-      ✓ 3 өдрийн туршилтын үр дүн
+      <Image src="/illustrations/check-circle.svg" alt="" width={17} height={17} className="result-check-illustration" /> 3 өдрийн туршилтын үр дүн
     </span>
 
     <h3>
@@ -755,7 +777,7 @@ export default function HomePage() {
           </div>
           <div className="implementation-cards">
             <div className="impl-card">
-              <h3>🛡️ Хүнсний аюулгүй байдал</h3>
+              <h3><span className="impl-icon-wrap"><Image src="/illustrations/shield-check.svg" alt="" width={33} height={33} /></span>Хүнсний аюулгүй байдал</h3>
               <p>
                 Ижил хөргөгчинд хадгалагддаг нь хамт савлахад хангалттай
                 үндэслэл биш. Орц, харшил үүсгэгч, бохирдлын эрсдэл,
@@ -763,14 +785,14 @@ export default function HomePage() {
               </p>
             </div>
             <div className="impl-card">
-              <h3>🤝 Хэрэглэгчийн зөвшөөрөл</h3>
+              <h3><span className="impl-icon-wrap"><Image src="/illustrations/handshake.svg" alt="" width={33} height={33} /></span>Хэрэглэгчийн зөвшөөрөл</h3>
               <p>
                 Сонголтыг ойлгомжтой, найрсаг санал болгож, тусдаа савлуулах
                 хүсэлтийг ямагт хүндэтгэнэ.
               </p>
             </div>
             <div className="impl-card">
-              <h3>⚡ Бизнесийн давхар үр өгөөж</h3>
+              <h3><span className="impl-icon-wrap"><Image src="/illustrations/speed.svg" alt="" width={33} height={33} /></span>Бизнесийн давхар үр өгөөж</h3>
               <p>
                 Гялгар уутны зардал буурахаас гадна касс дээр савлах хугацаа
                 богиносож, үйлчилгээний хурд, үйл ажиллагааны үр ашиг нэмэгдэнэ.
