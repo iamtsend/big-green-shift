@@ -3472,11 +3472,13 @@ p {
 
 footer {
 
-  padding: 36px 6%;
+  padding: 28px 6%;
 
   display: flex;
 
-  justify-content: space-between;
+  align-items: center;
+
+  gap: 24px;
 
   font-size: 13px;
 
@@ -3485,6 +3487,52 @@ footer {
   color: var(--muted);
 
   border-top: 1px solid var(--border);
+
+}
+
+.footer-resources {
+
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px 20px;
+
+}
+
+footer > span:last-child {
+
+  margin-left: auto;
+
+  text-align: right;
+
+}
+
+.footer-resource-link {
+
+  color: inherit;
+
+  font: inherit;
+
+  line-height: 1.35;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  text-underline-offset: 3px;
+
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+
+}
+
+.footer-resource-link:hover {
+
+  color: var(--ink);
+
+  text-decoration: underline;
 
 }
 
@@ -5192,11 +5240,28 @@ header .site-nav-toggle {
   }
 
   footer {
-    align-items: flex-start;
+    display: flex;
+    align-items: center;
     flex-direction: column;
-    gap: 6px;
+    gap: 12px;
     padding: 24px 5%;
     font-size: 12px;
+    text-align: center;
+  }
+
+  footer > span:last-child {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .footer-resources {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-resource-link {
+    max-width: 100%;
   }
 }
 

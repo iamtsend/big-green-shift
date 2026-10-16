@@ -914,6 +914,18 @@ export default function HomePage() {
 
       <footer>
         <span>BIG GREEN SHIFT · TEAM 19</span>
+        <div className="footer-resources">
+          <VideoModalButton variant="footer" />
+          <a
+            className="footer-resource-link"
+            href="/reports/one-page.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Нэг хуудасны ногоон туршилтын загварыг шинэ таб дээр нээж үзэх эсвэл татах"
+          >
+            Нэг хуудасны ногоон туршилтын загвар
+          </a>
+        </div>
         <span>Жижиг асуулт. Хэмжиж болох өөрчлөлт.</span>
       </footer>
     </>

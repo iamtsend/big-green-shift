@@ -2,7 +2,20 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export default function VideoModalButton() {
+function VideoPlayIcon() {
+  return (
+    <svg
+      className="video-trigger-icon"
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path d="M5 3.5v9l7-4.5-7-4.5Z" fill="currentColor" />
+    </svg>
+  );
+}
+
+export default function VideoModalButton({ variant = "cta" }) {
   const [isOpen, setIsOpen] = useState(false);
   const dialogRef = useRef(null);
   const videoRef = useRef(null);
@@ -23,21 +36,26 @@ export default function VideoModalButton() {
 
   return (
     <>
-      <button
-        type="button"
-        className="cta video-trigger"
-        onClick={() => setIsOpen(true)}
-      >
-        Асуудлын учир шалтгаан
-        <svg
-          className="video-trigger-icon"
-          viewBox="0 0 16 16"
-          aria-hidden="true"
-          focusable="false"
+      {variant === "footer" ? (
+        <a
+          className="footer-resource-link video-trigger"
+          href="/reports/video.mp4"
+          onClick={(event) => {
+            event.preventDefault();
+            setIsOpen(true);
+          }}
         >
-          <path d="M5 3.5v9l7-4.5-7-4.5Z" fill="currentColor" />
-        </svg>
-      </button>
+          Бичлэг үзэх
+        </a>
+      ) : (
+        <button
+          type="button"
+          className="cta video-trigger"
+          onClick={() => setIsOpen(true)}
+        >
+          Асуудлын учир шалтгаан <VideoPlayIcon />
+        </button>
+      )}
       <dialog
         ref={dialogRef}
         className="video-dialog"
