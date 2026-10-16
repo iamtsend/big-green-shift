@@ -1,5 +1,6 @@
 import Image from "next/image";
 import PackagingComparison from "../components/PackagingComparison";
+import ResponsiveNavigation from "../components/ResponsiveNavigation";
 import SavingsCalculator from "../components/SavingsCalculator";
 
 const experimentDays = [
@@ -162,14 +163,7 @@ export default function HomePage() {
             <small>TEAM 19 · MINI PROJECT</small>
           </div>
         </a>
-        <nav aria-label="Үндсэн цэс">
-          <a href="#problem">Асуудал</a>
-          <a href="#solution">Шийдэл</a>
-          <a href="#standards">Стандарт</a>
-          <a href="#experiment">Туршилт</a>
-          <a href="#impact">Тооцоолуур</a>
-          <a href="#thanks">Талархал</a>
-        </nav>
+        <ResponsiveNavigation />
       </header>
 
       <main>
