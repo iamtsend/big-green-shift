@@ -4114,7 +4114,7 @@ header .site-nav-toggle {
 
   header .site-nav-toggle span {
     position: absolute;
-    top: 50%;
+    top: calc(50% + 1px);
     left: 50%;
     width: 19px;
     height: 2px;
@@ -4125,14 +4125,17 @@ header .site-nav-toggle {
   }
 
   header .site-nav-toggle span:first-child {
-    transform: translate(-50%, -6px);
+    top: calc(50% - 6px);
+    transform: translateX(-50%);
   }
 
   header .site-nav-toggle span:last-child {
-    transform: translate(-50%, 6px);
+    top: calc(50% + 6px);
+    transform: translateX(-50%);
   }
 
   header .site-nav-toggle[aria-expanded="true"] span:first-child {
+    top: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
   }
 
@@ -4141,6 +4144,7 @@ header .site-nav-toggle {
   }
 
   header .site-nav-toggle[aria-expanded="true"] span:last-child {
+    top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
   }
 
