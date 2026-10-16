@@ -8,6 +8,141 @@ const experimentDays = [
   { day: "Өдөр 3", breads: 287, bags: 183, saved: 104 },
 ];
 
+// Decorative botanical illustration; no image dependency or client JavaScript.
+function LeafSprig({ className }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 260 440"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d="M61 445 C72 368 110 307 135 247 C166 180 145 127 175 55 C184 35 196 22 209 6"
+        stroke="currentColor"
+        strokeWidth="4"
+        strokeLinecap="round"
+      />
+      <path d="M96 354 C52 357 24 330 10 290 C58 292 93 311 105 342 Z" fill="currentColor" opacity=".7" />
+      <path d="M113 318 C114 267 146 240 192 229 C191 276 163 303 119 328 Z" fill="currentColor" opacity=".9" />
+      <path d="M136 258 C88 264 55 240 40 204 C86 205 122 220 146 248 Z" fill="currentColor" opacity=".8" />
+      <path d="M153 217 C157 165 193 135 235 127 C231 176 199 208 159 227 Z" fill="currentColor" opacity=".74" />
+      <path d="M151 158 C110 152 81 121 80 77 C129 91 153 114 162 147 Z" fill="currentColor" opacity=".65" />
+      <path d="M172 110 C164 68 187 29 229 5 C238 52 213 92 177 122 Z" fill="currentColor" opacity=".88" />
+      <path d="M82 392 C52 399 24 390 0 365 C39 351 72 358 93 381 Z" fill="currentColor" opacity=".6" />
+      <path d="M105 341 Q64 322 29 306 M123 315 Q160 267 181 247 M142 252 Q91 222 58 216 M159 213 Q192 172 222 141 M156 152 Q126 113 92 94 M177 112 Q205 68 220 20"
+        stroke="#d1e8bc" strokeWidth="2" opacity=".45" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// Decorative concept illustration: five bags -> question -> one bag.
+// SVG keeps the artwork lightweight and ensures it remains behind the content.
+function NarrativeBagFlow() {
+  const bags = [
+    { x: 80, y: 190, r: -12 },
+    { x: 155, y: 105, r: 9 },
+    { x: 185, y: 280, r: -6 },
+    { x: 265, y: 180, r: 13 },
+    { x: 305, y: 80, r: -9 },
+  ];
+
+  return (
+    <svg
+      className="narrative-background"
+      viewBox="0 0 960 520"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <defs>
+        <radialGradient id="narrative-glow">
+          <stop offset="0%" stopColor="#83D68C" stopOpacity="0.22" />
+          <stop offset="100%" stopColor="#83D68C" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <ellipse cx="730" cy="260" rx="320" ry="250" fill="url(#narrative-glow)" />
+
+      {/* Multiple bags before asking the question */}
+      <g className="narrative-small-bags">
+        {bags.map((bag, index) => (
+          <g
+            key={index}
+            transform={`translate(${bag.x} ${bag.y}) rotate(${bag.r} 30 50)`}
+            stroke="#A1D6B4"
+            strokeWidth="3"
+            strokeLinejoin="round"
+            opacity="0.44"
+          >
+            <path d="M9 26 H59 L66 100 H2 Z" />
+            <path d="M21 26 V17 C21 -5 47 -5 47 17 V26" />
+          </g>
+        ))}
+      </g>
+
+      {/* Dotted path connects the question with the simpler packaging */}
+      <path
+        className="narrative-flow"
+        d="M360 280 C430 340 485 315 535 275 S625 200 695 245"
+        stroke="#D8F266"
+        strokeWidth="3"
+        strokeDasharray="6 14"
+        strokeLinecap="round"
+        opacity="0.5"
+      />
+
+      <g className="narrative-question">
+        <circle
+          cx="510"
+          cy="195"
+          r="75"
+          fill="#28583F"
+          fillOpacity="0.4"
+          stroke="#D8F266"
+          strokeWidth="2"
+          strokeOpacity="0.55"
+        />
+        <text
+          x="510"
+          y="225"
+          fill="#D8F266"
+          fontSize="90"
+          fontWeight="700"
+          textAnchor="middle"
+          fontFamily="sans-serif"
+        >
+          ?
+        </text>
+      </g>
+
+      {/* One suitable bag with a checkmark */}
+      <g
+        className="narrative-one-bag"
+        stroke="#D8F266"
+        strokeWidth="5"
+        strokeLinejoin="round"
+      >
+        <path d="M720 240 H855 L870 430 H700 Z" fill="#D8F266" fillOpacity="0.06" />
+        <path d="M750 240 V203 C750 135 827 135 827 203 V240" />
+        <path
+          d="M753 330 L782 359 L828 303"
+          strokeWidth="7"
+          strokeLinecap="round"
+        />
+      </g>
+      <g fill="#D8F266" opacity="0.45">
+        <circle cx="635" cy="125" r="5" />
+        <circle cx="910" cy="180" r="3" />
+        <circle cx="610" cy="410" r="4" />
+        <circle cx="360" cy="90" r="3" />
+      </g>
+    </svg>
+  );
+}
+
 export default function HomePage() {
   return (
     <>
@@ -35,9 +170,6 @@ export default function HomePage() {
           <a href="#impact">Тооцоолуур</a>
           <a href="#thanks">Талархал</a>
         </nav>
-        <button className="full" id="fullscreen">
-          ⛶ Бүтэн дэлгэц
-        </button>
       </header>
 
       <main>
@@ -220,7 +352,8 @@ export default function HomePage() {
         </section>
 
         {/* Narrative Break: The 2-Second Question */}
-        <section className="dark split">
+        <section className="dark split narrative-section">
+          <NarrativeBagFlow />
           <div>
             <div className="eyebrow">
               Өөрчилсөн зүйл — ганц өгүүлбэр, 2 секунд
@@ -561,15 +694,15 @@ export default function HomePage() {
             <div className="city-scale-highlights">
               <div className="city-scale-item">
                 <strong>1 салбарт хэрэгжүүлбэл</strong>
-                <span>→ Жилд ~30,113 уут хэмнэнэ</span>
+                <span>→ Жилд ~30,660 уут хэмнэнэ</span>
               </div>
               <div className="city-scale-item">
                 <strong>10 салбарт өргөжүүлбэл</strong>
-                <span>→ Жилд ~301,130 уут хэмнэнэ</span>
+                <span>→ Жилд ~306,600 уут хэмнэнэ</span>
               </div>
               <div className="city-scale-item">
                 <strong>100 салбарт хэрэгжүүлбэл</strong>
-                <span>→ Жилд ~3.01 сая уут хэмнэнэ</span>
+                <span>→ Жилд ~3.07 сая уут хэмнэнэ</span>
               </div>
             </div>
             <p className="note" style={{ marginTop: "16px" }}>
@@ -627,6 +760,11 @@ export default function HomePage() {
 
         {/* End / Call to Action */}
         <section className="end">
+          {/* Subtle animated green leaves behind the CTA content */}
+          <div className="end-leaf-background" aria-hidden="true">
+            <LeafSprig className="end-leaf end-leaf--left" />
+            <LeafSprig className="end-leaf end-leaf--right" />
+          </div>
           <div className="eyebrow">Small question. Big change.</div>
           <h2>
             Хамгийн хэрэггүй уут бол
