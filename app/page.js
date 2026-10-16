@@ -400,7 +400,7 @@ export default function HomePage() {
 
     <div className="result-grid">
       <div>
-        <b>165</b>
+        <b>168</b>
         Хэмнэсэн гялгар уут (ширхэг)
       </div>
 
@@ -448,22 +448,26 @@ export default function HomePage() {
             </p>
             <div className="city-scale-highlights">
               <div className="city-scale-item">
-                <strong>1 салбарт (өдөрт 20 захиалга)</strong>
-                <span>→ Жилд ~29,200 уут хэмнэнэ</span>
+                <strong>1 салбарт хэрэгжүүлбэл</strong>
+                <span>→ Жилд ~30,660 уут хэмнэнэ</span>
               </div>
               <div className="city-scale-item">
                 <strong>10 салбарт өргөжүүлбэл</strong>
-                <span>→ Жилд ~292,000 уут хэмнэнэ</span>
+                <span>→ Жилд ~306,600 уут хэмнэнэ</span>
               </div>
               <div className="city-scale-item">
-                <strong>100 салбарт хэрэгжвэл</strong>
-                <span>→ Жилд ~2.9 сая уутны хэрэглээ буурна</span>
+                <strong>100 салбарт хэрэгжүүлбэл</strong>
+                <span>→ Жилд ~3.07 сая уут хэмнэнэ</span>
               </div>
             </div>
             <p className="note" style={{ marginTop: "16px" }}>
-              Таамаг тооцоо: бүх сонгосон салбарт өдөр бүр ижил үр дүн гарна гэж
-              үзнэ. Бодит үр дүн нь хэрэглэгчийн сонголт, бүтээгдэхүүн, ажлын
-              өдөр болон савлагааны шаардлагаас хамаарна.
+              * Туршилтын 2 өдөрт хэмнэсэн 168 уут буюу
+              өдөрт дунджаар 84 уутыг суурь болгон,
+              салбар бүр жилд 365 өдөр ижил үр дүнтэй
+              ажиллана гэж тооцсон боломжит хэмнэлт.
+              Бодит үр дүн нь борлуулалтын хэмжээ,
+              хэрэглэгчийн сонголт болон савлагааны
+              шаардлагаас хамаарна.
             </p>
           </div>
           <SavingsCalculator />
