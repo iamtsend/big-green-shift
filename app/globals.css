@@ -1216,14 +1216,59 @@ p {
 
 }
 
+#experiment {
+  background: #f5f7f1;
+}
+
+.experiment-intro {
+  max-width: 850px;
+  margin-bottom: 34px;
+}
+
+.experiment-intro h2 {
+  margin: 8px 0 16px;
+}
+
+.experiment-intro h2 span {
+  color: #499d63;
+}
+
+.experiment-intro .lead {
+  max-width: 760px;
+  margin: 0;
+}
+
+#experiment .steps {
+  margin-top: 0;
+}
+
+#experiment .step {
+  min-width: 0;
+  min-height: 100%;
+  padding-top: 34px;
+}
+
+#experiment .num {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 5px 10px;
+  color: #34734a;
+  background: #edf5e9;
+  border: 1px solid rgba(73, 157, 99, 0.12);
+  border-radius: 999px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+#experiment .step h3 {
+  margin-top: 16px;
+}
+
 .experiment-chart {
-
-  margin: 0 0 35px;
-
+  margin: 0 0 28px;
   padding: 30px;
-
   background: #ffffff;
-
   border: 1px solid var(--border-strong);
 
   border-radius: 24px;
@@ -1233,11 +1278,19 @@ p {
 }
 
 .experiment-chart figcaption h3 {
-
+  display: flex;
+  align-items: center;
+  gap: 9px;
   margin: 0 0 6px;
-
   font-size: 22px;
+}
 
+.experiment-chart figcaption h3::before {
+  width: 4px;
+  height: 22px;
+  background: #69a87a;
+  border-radius: 99px;
+  content: "";
 }
 
 .experiment-chart figcaption p {
@@ -1391,17 +1444,23 @@ p {
 }
 
 .results {
-
-  background: #eef2e4;
-
-  border: 1px solid rgba(15, 46, 35, 0.1);
-
+  color: #ffffff;
+  background: #0f2e23;
+  border: 1px solid rgba(15, 46, 35, 0.16);
   border-radius: 30px;
-
   padding: 38px;
+  box-shadow: var(--shadow-md);
+}
 
-  box-shadow: var(--shadow-sm);
+.results > .pill {
+  color: var(--ink);
+  background: var(--lime-soft);
+  border-color: rgba(216, 242, 102, 0.3);
+}
 
+.results > h3 {
+  margin: 18px 0 0;
+  color: #ffffff;
 }
 
 .result-grid {
@@ -1420,19 +1479,13 @@ p {
 
   padding: 26px 24px;
 
-  background: #ffffff;
-
+  background: rgba(255, 255, 255, 0.07);
   border-radius: 20px;
-
-  border: 1px solid rgba(15, 46, 35, 0.08);
-
-  box-shadow: var(--shadow-sm);
-
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: none;
   font-size: 14.5px;
-
   font-weight: 600;
-
-  color: var(--muted);
+  color: #c7d7ce;
 
   transition: transform 0.2s ease;
 
@@ -1452,12 +1505,16 @@ p {
 
   font-weight: 850;
 
-  color: var(--ink-deep);
+  color: var(--lime);
 
   letter-spacing: -0.02em;
 
   margin-bottom: 6px;
 
+}
+
+.results > p {
+  color: #c7d7ce;
 }
 
 /* ==========================================================================
@@ -4658,6 +4715,19 @@ header .site-nav-toggle {
     width: 100%;
     padding: 24px 18px;
     border-radius: 24px;
+  }
+
+  .experiment-intro {
+    margin-bottom: 26px;
+  }
+
+  .experiment-intro h2 {
+    font-size: clamp(29px, 8vw, 38px);
+  }
+
+  #experiment .step {
+    min-height: 0;
+    padding-top: 30px;
   }
 
   .result-grid {

@@ -499,29 +499,20 @@ export default function HomePage() {
         
 {/* Section 03: The Experiment */}
 <section id="experiment">
-  <div className="eyebrow">
-    03 — Бодит орчин дахь туршилт
+  <div className="experiment-intro">
+    <div className="eyebrow">03 — Бодит орчин дахь туршилт</div>
+    <h2>
+      Гурван өдөр. Нэг өөрчлөлт.
+      <br />
+      <span>Бодит үр дүн.</span>
+    </h2>
+    <p className="lead">
+      Туршилтын байршил:{" "}
+      <strong>Tous Les Jours-ийн Сүмбэр Орд салбар</strong>.
+      <br />
+      1 өдөр суурь хэмжилт + 2 өдөр шинэ савлагааны сонголт санал болгох.
+    </p>
   </div>
-
-  <h2>
-    Гурван өдөр.
-    <br />
-    Нэг өөрчлөлт.
-    <br />
-    <span style={{ color: "#5A9B6E" }}>
-      Бодит үр дүн.
-    </span>
-  </h2>
-
-  <p className="lead">
-    Туршилтын байршил:{" "}
-    <strong>
-      Tous Les Jours-ийн Сүмбэр Орд салбар
-    </strong>
-    .<br />
-    1 өдөр суурь хэмжилт + 2 өдөр шинэ
-    савлагааны сонголт санал болгох.
-  </p>
 
   <div className="steps">
     <div className="step">
