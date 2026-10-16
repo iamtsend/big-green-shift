@@ -3111,11 +3111,9 @@ p {
   }
 
   .standards-priority {
-
-    align-self: flex-start;
-
+    align-self: stretch;
+    width: 100%;
     margin: 0;
-
   }
 
   .standard-card {
@@ -4465,5 +4463,558 @@ header .site-nav-toggle {
   .pack-comparison .pack-count {
     animation: none !important;
     transition: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    scroll-padding-top: 76px;
+  }
+
+  body {
+    overflow-x: clip;
+  }
+
+  main {
+    width: 100%;
+    min-width: 0;
+  }
+
+  header {
+    padding: 10px 5%;
+    gap: 10px;
+  }
+
+  header .brand {
+    min-width: 0;
+    gap: 9px;
+  }
+
+  header .brand-logo {
+    width: 34px;
+    height: 34px;
+  }
+
+  header .brand-text {
+    font-size: 14px;
+  }
+
+  header .brand-text small {
+    font-size: 8px;
+    letter-spacing: 0.1em;
+  }
+
+  section {
+    min-width: 0;
+    padding: 48px 5%;
+  }
+
+  .hero,
+  .split {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .hero {
+    padding-top: 34px;
+    padding-bottom: 42px;
+  }
+
+  .hero > div,
+  .split > div {
+    min-width: 0;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: clamp(38px, 11vw, 52px);
+  }
+
+  h2 {
+    font-size: clamp(28px, 8vw, 36px);
+    margin-top: 12px;
+    margin-bottom: 18px;
+  }
+
+  h3 {
+    font-size: 19px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .lead {
+    font-size: 17px;
+  }
+
+  .hero-pill-group .pill {
+    max-width: 100%;
+    align-items: flex-start;
+    border-radius: 16px;
+    font-size: 11.5px;
+    line-height: 1.5;
+    padding: 8px 12px;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-actions .cta,
+  .hero-actions .hero-secondary-link {
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    text-align: center;
+  }
+
+  .scene {
+    width: 100%;
+    min-height: 360px;
+    padding: 26px 14px 76px;
+    border-radius: 24px;
+  }
+
+  .scene > .eyebrow {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .scene .bagrow {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .scene .bag {
+    width: 64px;
+    height: 90px;
+  }
+
+  .scene .bread-illustration {
+    width: 42px;
+    height: 42px;
+  }
+
+  .scene-label {
+    max-width: 100%;
+    margin-top: 24px;
+    padding: 6px 11px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .floating {
+    right: 12px;
+    bottom: 12px;
+    gap: 6px;
+    padding: 9px 13px;
+    border-radius: 14px;
+    font-size: 11px;
+  }
+
+  .floating b {
+    font-size: 24px;
+  }
+
+  .strip {
+    grid-template-columns: minmax(0, 1fr);
+    margin: 0 5%;
+    border-radius: 20px;
+  }
+
+  .strip div {
+    width: 100%;
+    padding: 18px 20px;
+    font-size: 13.5px;
+  }
+
+  .strip strong {
+    font-size: 19px;
+  }
+
+  .dark {
+    margin: 20px 3%;
+    padding: 38px 6%;
+    border-radius: 26px;
+  }
+
+  .quote {
+    font-size: clamp(26px, 7vw, 34px);
+  }
+
+  .choices {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 380px;
+    margin: 20px 0;
+  }
+
+  .choice {
+    justify-content: center;
+    min-width: 0;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .demo {
+    width: 100%;
+    min-width: 0;
+    min-height: 270px;
+    padding: 24px 14px;
+    border-radius: 24px;
+  }
+
+  .pack-comparison .pack-bagrow {
+    gap: 8px;
+  }
+
+  .pack-comparison .pack-bagrow--separate > .pack-bag {
+    width: clamp(36px, 12vw, 44px);
+    height: 74px;
+    margin-top: 14px;
+    border-radius: 8px 8px 14px 14px;
+  }
+
+  .pack-comparison .pack-bagrow--separate > .pack-bag::before {
+    width: 25px;
+    height: 17px;
+    top: -17px;
+  }
+
+  .pack-comparison .pack-breads--single .pack-bread,
+  .pack-comparison .pack-breads--single .pack-bread-image {
+    width: 34px;
+    height: 34px;
+  }
+
+  .pack-comparison .pack-count-row {
+    margin-top: 18px !important;
+  }
+
+  .pack-comparison .pack-count {
+    font-size: 54px;
+  }
+
+  .problem-card {
+    width: 100%;
+  }
+
+  .steps {
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .step {
+    width: 100%;
+    padding: 24px 22px;
+    border-radius: 20px;
+  }
+
+  .experiment-chart {
+    width: 100%;
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+
+  .experiment-chart figcaption h3 {
+    font-size: 19px;
+  }
+
+  .experiment-chart figcaption p {
+    font-size: 12.5px;
+  }
+
+  .results {
+    width: 100%;
+    padding: 24px 18px;
+    border-radius: 24px;
+  }
+
+  .result-grid {
+    gap: 10px;
+  }
+
+  .result-grid div {
+    padding: 20px;
+  }
+
+  .result-grid b {
+    font-size: 34px;
+  }
+
+  .standards-section .standards-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    margin-top: 26px;
+  }
+
+  .standard-card {
+    width: 100%;
+    padding: 24px 22px;
+  }
+
+  .standard-card-top {
+    flex-wrap: wrap;
+  }
+
+  .standards-callout {
+    width: 100%;
+    padding: 18px;
+  }
+
+  #impact .city-scale-item {
+    width: 100%;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 14px 16px;
+  }
+
+  .calc {
+    width: 100%;
+    min-width: 0;
+    padding: 24px 16px;
+    border-radius: 26px;
+  }
+
+  .calc-header-row {
+    align-items: flex-start;
+  }
+
+  .calc-header-row .pill {
+    max-width: 100%;
+    font-size: 11px;
+    white-space: normal;
+  }
+
+  .calc-live-pill {
+    font-size: 9px;
+  }
+
+  .calc-card {
+    padding: 17px 14px;
+    border-radius: 17px;
+  }
+
+  .calc-card-header {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .calc-card-header > div:first-child {
+    min-width: 0;
+    flex: 1 1 100%;
+  }
+
+  .calc-label-title {
+    font-size: 13.5px;
+  }
+
+  .calc-label-hint {
+    font-size: 11px;
+  }
+
+  .calc-stepper-box {
+    align-self: flex-start;
+  }
+
+  .calc-stepper-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .calc-preset-chip {
+    min-height: 36px;
+    padding: 6px 11px;
+  }
+
+  .total {
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+
+  .total-header {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .total-tag {
+    font-size: 9px;
+  }
+
+  .total-annual-hero {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  .total-annual-hero .metric {
+    font-size: clamp(40px, 12vw, 54px);
+    letter-spacing: -1px;
+  }
+
+  .total-annual-hero .metric-unit {
+    font-size: 12px;
+  }
+
+  .total-subgrid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 9px;
+  }
+
+  .total-subcard {
+    padding: 13px 14px;
+  }
+
+  .formula {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .implementation-cards,
+  .implementation-cards .impl-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .implementation-cards .impl-card {
+    padding: 20px 18px;
+  }
+
+  .implementation-cards .impl-card h3 {
+    font-size: 17px;
+    overflow-wrap: anywhere;
+  }
+
+  .end {
+    margin: 18px 3%;
+    padding: 52px 6%;
+    border-radius: 26px;
+  }
+
+  .end h2 br,
+  .end .lead br {
+    display: none;
+  }
+
+  .end p {
+    font-size: 15px;
+  }
+
+  .end .cta {
+    max-width: 100%;
+    padding: 0 18px;
+  }
+
+  .end-leaf {
+    width: 150px;
+    opacity: 0.16;
+  }
+
+  .acknowledgments {
+    margin-top: 28px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .ack-intro {
+    margin-bottom: 24px;
+  }
+
+  .ack-intro h2 {
+    font-size: clamp(27px, 7.5vw, 34px);
+  }
+
+  .ack-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .ack-card {
+    width: 100%;
+    min-width: 0;
+    padding: 24px 20px;
+    border-radius: 22px;
+  }
+
+  .partner-logo {
+    max-width: 100%;
+    margin-bottom: 18px;
+  }
+
+  .partner-logo:has(.tlj-logo) {
+    padding: 18px;
+  }
+
+  .tlj-logo {
+    max-width: 100%;
+  }
+
+  .project-label {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+    padding: 24px 5%;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  header .brand-text {
+    font-size: 12px;
+  }
+
+  header .brand-text small {
+    font-size: 7px;
+  }
+
+  .problem-card {
+    padding: 18px 14px;
+  }
+
+  .multiplier-row {
+    grid-template-columns: minmax(0, 0.7fr) 24px minmax(0, 1.3fr);
+    gap: 5px;
+    padding: 9px 7px;
+  }
+
+  .multiplier-illustrations .mini-bread-illustration {
+    width: 19px;
+    height: 19px;
+    margin-left: -7px;
+  }
+
+  .multiplier-arrow {
+    width: 24px;
+    height: 24px;
+  }
+
+  .multiplier-breakdown {
+    font-size: 10.5px;
+  }
+
+  .multiplier-total-badge {
+    padding: 3px 6px;
+    font-size: 9.5px;
+  }
+
+  .calc {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .total-annual-hero .metric {
+    font-size: 38px;
   }
 }
