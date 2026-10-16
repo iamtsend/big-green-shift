@@ -2,6 +2,12 @@ import Image from "next/image";
 import PackagingComparison from "../components/PackagingComparison";
 import SavingsCalculator from "../components/SavingsCalculator";
 
+const experimentDays = [
+  { day: "Өдөр 1", breads: 240, bags: 181, saved: null },
+  { day: "Өдөр 2", breads: 224, bags: 160, saved: 64 },
+  { day: "Өдөр 3", breads: 287, bags: 183, saved: 104 },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -381,11 +387,117 @@ export default function HomePage() {
       <p>
         Туршилтын тайланд гялгар уутны
         хэрэглээ 37.6%-иар буурч,
-        нийт 165 ширхэг уут хэмнэсэн
+        нийт 168 ширхэг уут хэмнэсэн
         гэж дүгнэсэн.
       </p>
     </div>
   </div>
+
+  <figure className="experiment-chart" aria-labelledby="experiment-chart-title">
+    <figcaption>
+      <h3 id="experiment-chart-title">3 өдрийн үзүүлэлт</h3>
+      <p>Борлуулсан талх, ашигласан болон хэмнэсэн уут (ширхэг)</p>
+    </figcaption>
+    <div className="chart-scroll">
+      <svg
+        viewBox="0 0 760 310"
+        role="img"
+        aria-labelledby="experiment-chart-title experiment-chart-description"
+      >
+        <desc id="experiment-chart-description">
+          Өдөр 1: 240 талх борлуулж, 181 уут ашигласан; хэмнэсэн уутын
+          хэмжилт байхгүй. Өдөр 2: 224 талх, 160 ашигласан уут, 64 хэмнэсэн
+          уут. Өдөр 3: 287 талх, 183 ашигласан уут, 104 хэмнэсэн уут.
+        </desc>
+        {[0, 100, 200, 300].map((tick) => {
+          const y = 252 - (tick / 300) * 220;
+          return (
+            <g key={tick}>
+              <line
+                className="chart-gridline"
+                x1="76"
+                x2="738"
+                y1={y}
+                y2={y}
+              />
+              <text className="chart-tick" x="64" y={y + 4} textAnchor="end">
+                {tick}
+              </text>
+            </g>
+          );
+        })}
+        {experimentDays.map((entry, index) => {
+          const center = 198 + index * 216;
+          const bars = [
+            { key: "breads", value: entry.breads, className: "chart-bar-breads", offset: -42 },
+            { key: "bags", value: entry.bags, className: "chart-bar-bags", offset: -6 },
+            { key: "saved", value: entry.saved, className: "chart-bar-saved", offset: 30 },
+          ];
+
+          return (
+            <g key={entry.day}>
+              {bars.map((bar) => {
+                if (bar.value === null) {
+                  return (
+                    <text
+                      key={bar.key}
+                      className="chart-bar-value"
+                      x={center + bar.offset + 14}
+                      y="242"
+                      textAnchor="middle"
+                    >
+                      —
+                    </text>
+                  );
+                }
+
+                const height = (bar.value / 300) * 220;
+                const y = 252 - height;
+
+                return (
+                  <g key={bar.key}>
+                    <rect
+                      className={bar.className}
+                      x={center + bar.offset}
+                      y={y}
+                      width="28"
+                      height={height}
+                      rx="5"
+                    />
+                    <text
+                      className="chart-bar-value"
+                      x={center + bar.offset + 14}
+                      y={y - 7}
+                      textAnchor="middle"
+                    >
+                      {bar.value}
+                    </text>
+                  </g>
+                );
+              })}
+              <text className="chart-day" x={center} y="282" textAnchor="middle">
+                {entry.day}
+              </text>
+            </g>
+          );
+        })}
+      </svg>
+    </div>
+    <div className="chart-legend" aria-hidden="true">
+      <span className="chart-legend-item">
+        <i className="chart-legend-breads" />
+        Борлуулсан талх
+      </span>
+      <span className="chart-legend-item">
+        <i className="chart-legend-bags" />
+        Ашигласан уут
+      </span>
+      <span className="chart-legend-item">
+        <i className="chart-legend-saved" />
+        Хэмнэсэн уут
+      </span>
+    </div>
+  </figure>
 
   <div className="results">
     <span className="pill">
