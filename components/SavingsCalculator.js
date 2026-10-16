@@ -25,7 +25,6 @@ export default function SavingsCalculator() {
         <span className="pill pill-glow">
           <span className="dot dot-pulse" /> Боломжит хэмнэлтийн тооцоолуур
         </span>
-        <span className="calc-live-pill">Интерактив тооцоолол</span>
       </div>
 
       {/* Control 1: Orders */}
@@ -79,18 +78,6 @@ export default function SavingsCalculator() {
           <span>100 захиалга</span>
         </div>
 
-        <div className="calc-presets">
-          {[10, 20, 35, 50, 75].map((val) => (
-            <button
-              key={val}
-              type="button"
-              className={`calc-preset-chip ${orders === val ? 'active' : ''}`}
-              onClick={() => setOrders(val)}
-            >
-              {val}
-            </button>
-          ))}
-        </div>
       </div>
 
       {/* Control 2: Bags saved per order */}
@@ -144,18 +131,6 @@ export default function SavingsCalculator() {
           <span>10 уут</span>
         </div>
 
-        <div className="calc-presets">
-          {[2, 3, 4, 5, 8].map((val) => (
-            <button
-              key={val}
-              type="button"
-              className={`calc-preset-chip ${bags === val ? 'active' : ''}`}
-              onClick={() => setBags(val)}
-            >
-              {val} уут
-            </button>
-          ))}
-        </div>
       </div>
 
       {/* Control 3: Branches */}
@@ -209,18 +184,6 @@ export default function SavingsCalculator() {
           <span>100 салбар</span>
         </div>
 
-        <div className="calc-presets">
-          {[1, 3, 5, 10, 20].map((val) => (
-            <button
-              key={val}
-              type="button"
-              className={`calc-preset-chip ${branches === val ? 'active' : ''}`}
-              onClick={() => setBranches(val)}
-            >
-              {val} салбар
-            </button>
-          ))}
-        </div>
       </div>
 
       {/* Total Impact Display */}
